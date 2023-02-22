@@ -70,4 +70,30 @@ data management approach are apparent. In this example, we could get a higher
 quality analysis of the risk profile of a company by looking at its debts
 and its equities together, instead of just its debts or just its equities.
 
+To support the diverse activities of a complex financial institution, such
+as an investment bank, a holistic data management solution must support data
+types including, but not necessarily limited to, contracts and transactions.
+This data should include all contracts the instutition is party to, but also
+probably all contracts the instutition is exposed to in some way. For instance,
+if a bank owns a mortgage backed security, then ideally their database would
+include all of the underlying mortgages and their payment histories, since this
+data would be necessary to analyze the risk exposure implied by owning the MBS.
+From a risk analysis standpoint, it would be even better if the bank could see
+the entire payment histories of all of the borrowers of those mortgages, so they
+could estimate the creditworthiness of the borrowers. In practice, this would
+present some concerns about privacy.
+
+These considerations suggest that the challenges in designing a holistic financial
+data management solution include protecting privacy, and handling potentially
+a very large volume of data. Given that each data point is potentially of interest
+to multiple institutions, there may be cost savings to be obtained by sharing
+data management infrastructure across institutions. Doing so, however, raises
+concerns not only about privacy but also trust. A financial institution may not
+trust any other institution to manage their data. Also, individuals may have
+rights to privacy of their personal data by law, and institutions may wish to
+preserve the privacy of their customers to a greater extent than required by law.
+
+
+
+
 \end{document}
