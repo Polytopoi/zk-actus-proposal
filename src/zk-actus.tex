@@ -87,8 +87,12 @@ These considerations suggest that the challenges in designing a holistic financi
 data management solution include protecting privacy, and handling potentially
 a very large volume of data. Given that each data point is potentially of interest
 to multiple institutions, there may be cost savings to be obtained by sharing
-data management infrastructure across institutions. Doing so, however, raises
-concerns not only about privacy but also trust. A financial institution may not
+data management infrastructure across institutions.\footnote{Sharing data management
+infrastructure is already a common practice among financial instutitions, as
+I know from my professional experience; however, in my experience, this sharing
+is limited to data which is not of a sensitive, private nature.}
+Doing so, however, raises concerns not only about privacy but also trust.
+A financial institution may not
 trust any other institution to manage their data. Also, individuals may have
 rights to privacy of their personal data by law, and institutions may wish to
 preserve the privacy of their customers to a greater extent than required by law.
@@ -122,5 +126,32 @@ by using an extensive amount of replication. These duplicated efforts make
 it relatively costly to add data to a decentralized layer one blockchain, while
 also limiting the rate at which data can be added, due to the communication
 overhead involved in coordinating the replicas.
+
+A ZK rollup uses less replication, which allows for improvements in efficiency
+/ throughput, while also complicating the security analysis. A ZK rollup
+guarantees that the ledger state it records is valid by periodically posting
+a hash of the ledger state to the layer one, along with a zero knowledge proof
+showing that it is the hash of a valid ledger. If the layer one is programmed
+to accept such an update only when the proof is valid, then it is infeasible to
+update the layer one to contain an invalid claim about the state of the rollup.
+This ensures that all transactions on the ZK rollup are signed by the proper
+parties, that all rules of all applicable smart contracts are satisfied, that
+no currency is double spent, and so forth.
+
+A ZK rollup may still require some trust assumptions. The zero knowledge proof
+protocol allows a user to know, without any trust assumptions, that the rollup
+state synced to layer one is valid, or in other words, no invalid transactions
+made it in. This still leaves open the possibility that some valid transactions
+submitted by users were excluded. If this possibility is left open, then it requires
+a trust assumption from rollup users, namely that the rollup infrastructure is
+not going to censor them or their counterparties. More sophisticated ZK rollup
+designs may eliminate the need for this trust assumption by building in censorship
+resistance mechanisms. At that point, a ZK rollup might be fully decentralized,
+requiring no trust assumptions from its users.
+
+Zero knowledge proof technology opens up a lot of possibilities when it comes
+to protecting privacy and implementing access control models. Data can be recorded
+on the rollup as ciphertexts, which can be deciphered only by designated parties,
+consistent with an access control model. 
 
 \end{document}
