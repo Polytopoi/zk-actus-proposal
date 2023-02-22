@@ -40,8 +40,9 @@ the symbology mappings must therefore be updated regularly, ideally in an automa
 or mostly automated fashion. In practice, this is not a simple problem.
 
 What would make any collation problem much easier is if the data to be collated
-already comes in a homogeneous form. If data providers are to arrange for such a
-situation, they require open standards for how financial data is to be structured.
+already comes in a homogeneous form. If financial data providers are to arrange
+for such a situation, then they require open standards for how financial data is to
+be structured.
 ACTUS, the Algorithmic Contract Types Unified Standard, takes a bite out of this
 problem by offering a standard format for financial contracts. ACTUS takes the
 view that basic financial instruments like cash and equities, as well as
@@ -49,7 +50,24 @@ debt instruments and derivatives, are all contracts. Contracts are not the only
 type we need in an ontology of financial data, but they are certainly a very
 useful type which captures a lot of the data types that need to be expressed
 in an ontology of financial data. ACTUS itself is not a complete ontology of
-contracts, but reportedly (TODO: who says this?) it is rare for contracts not
-to be expressed within the ontology of ACTUS contracts.
+contracts, but reportedly (TODO: who says this?) it is rare to find a financial
+contract which cannot be expressed within the taxonomy of ACTUS contracts.
+
+Taking ACTUS as a jumping off point, we can begin to imagine a holistic data
+management solution for financial institutions. A holistic approach to data
+management takes data out of siloes, and puts it into a common database, allowing
+connections to be made more easily. For instance, with a holistic data management
+approach, the debts and equities of a company can be viewed together in the same
+analysis. Let's contrast this with a siloed data management approach.
+The debts of a company might be
+analyzed by people in a fixed income department, while the equities of the same
+company are analyzed by people in an equities department. Those two sets of
+people analyzing the same company might not talk to each other or look at each
+other's data, and they might not have the technical ability to share data
+between each other's systems in a low-friction way. That would be typical of a
+siloed data management approach. To some extent, the benefits of a holistic
+data management approach are apparent. In this example, we could get a higher
+quality analysis of the risk profile of a company by looking at its debts
+and its equities together, instead of just its debts or just its equities.
 
 \end{document}
