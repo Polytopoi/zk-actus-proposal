@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[total={7in,9in}]{geometry}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{hyperref}
+
+\title{Zero knowledge ACTUS for holistic financial data management}
+\author{ \\ Morgan Thomas \\ Casper Association \\ morgan@casper.network }
+
+
+\begin{document}
+
+\maketitle
+
+The ability of financial instutitions to know the risks they are exposed to
+depends on their access to high quality data which they can use as input to
+models and analyses. To be high quality, the data must be accurate, and also
+organized. Accurate but disorganized data is not useful for modeling and analysis
+until it is organized, because only well organized data can be used as input to
+rigorous, systematic processes which make sense of the data.
+
+Organizing financial data involves collating data from diverse sources.
+The problem of collating financial data, which may appear to be a boring problem
+at first blush, is not only systematically important but also outrageously
+complicated. To get a sense of the scale of the problem, let's consider one
+relatively tiny piece of it, which is quite extensive in itself. Let's consider
+the problem of presenting the prices of one equity on all of the exchanges
+where it is listed, given the price feeds for all of the exchanges. To do this,
+we need to be able to map the name or ticker symbol of an equity on one exchange
+to the name or ticker symbol of the same equity on any other exchange. The natural
+approach is to choose a standard symbology for equities and learn to map all of
+the symbologies of each exchange onto the standard symbology. There are dozens
+of stock exchanges, and thousands of publicly traded companies, each with one
+or more share classes. Furthermore, each exchange regularly lists new stocks, and
+the symbology mappings must therefore be updated regularly, ideally in an automated
+or mostly automated fashion. In practice, this is not a simple problem.
+
+What would make any collation problem much easier is if the data to be collated
+already comes in a homogeneous form. If data providers are to arrange for such a
+situation, they require open standards for how financial data is to be structured.
+ACTUS, the Algorithmic Contract Types Unified Standard, takes a bite out of this
+problem by offering a standard format for financial contracts. ACTUS takes the
+view that basic financial instruments like cash and equities, as well as
+debt instruments and derivatives, are all contracts. Contracts are not the only
+type we need in an ontology of financial data, but they are certainly a very
+useful type which captures a lot of the data types that need to be expressed
+in an ontology of financial data. ACTUS itself is not a complete ontology of
+contracts, but reportedly (TODO: who says this?) it is rare for contracts not
+to be expressed within the ontology of ACTUS contracts.
+
+\end{document}
