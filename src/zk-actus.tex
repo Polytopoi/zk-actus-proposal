@@ -99,4 +99,28 @@ which protects privacy in a granular access control model? It is our thesis that
 we can, and that such a solution could take the shape of a zero knowledge
 rollup.
 
+A zero knowledge (ZK) rollup is a blockchain built in a particular way which
+supports privacy, scalability, and minimizing trust assumptions. What is meant
+by a ``blockchain'' here is simply an append-only ledger of transactions (organized
+for convenience into blocks), and a software system for maintaining and interacting
+with that ledger. A decentralized system is one which has a sufficiently
+high\footnote{what is ``sufficient'' here is left ambiguous} Nakamoto coefficient,
+defined as the minimum number of actors in the system which would have to
+simultaneously exhibit Byzantine faults in order to cause a Byzantine failure.
+In other words, in a decentralized system, there is no small number of actors
+who could simultaneously fail or collude to cause the system to deviate from
+its intended behavior.
+
+A ZK rollup is a layer two solution, which means that it is built on top of
+a pre-existing decentralized blockchain (called a layer one in this context).
+The security analysis of a ZK rollup relies on the layer one being decentralized.
+If the layer one is decentralized, then no one has to be trusted to ensure its
+correct operation. The ZK rollup uses a more centralized architecture, for reasons
+of efficiency, but it relies on syncing its state to the layer one in order to
+minimize trust assumptions. A layer one blockchain typically achieves decentralization
+by using an extensive amount of replication. These duplicated efforts make
+it relatively costly to add data to a decentralized layer one blockchain, while
+also limiting the rate at which data can be added, due to the communication
+overhead involved in coordinating the replicas.
+
 \end{document}
